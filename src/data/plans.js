@@ -1,0 +1,32 @@
+export const plans = [
+  {
+    id: 'vip1',
+    name: 'VIP 1',
+    usdAmount: 167,
+    localAmount: 'RM675.57',
+    description: 'A great entry point to begin your gold journey.',
+    benefits: ['Entry-level access', 'Premium onboarding support', 'Flexible participation'],
+    active: true,
+    displayOrder: 1,
+  },
+  {
+    id: 'vip2',
+    name: 'VIP 2',
+    usdAmount: 444,
+    localAmount: 'RM1,800.00',
+    description: 'A stronger participation level with more flexibility.',
+    benefits: ['Enhanced value', 'Priority support', 'Expanded benefits'],
+    active: true,
+    displayOrder: 2,
+  },
+  {
+    id: 'vip3',
+    name: 'VIP 3',
+    usdAmount: 2223,
+    localAmount: 'RM9,000.00',
+    description: 'A premium plan for serious long-term participation.',
+    benefits: ['Top-tier access', 'Dedicated guidance', 'Priority processing'],
+    active: true,
+    displayOrder: 3,
+  },
+]
