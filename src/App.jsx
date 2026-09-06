@@ -64,9 +64,12 @@ function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link to="/" className="brand" aria-label="Siri Semantan Gold home">
-          <img src={logoPath} alt="Siri Semantan Gold logo" onError={(e) => { e.currentTarget.style.display = 'none' }} />
-          <span>Siri Semantan Gold</span>
+        <Link to="/" className="brand" aria-label="Siri Samantan home">
+          <img src={logoPath} alt="Siri Samantan Gold logo" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+          <div className="brand-copy">
+            <span className="brand-name">SIRI SAMANTAN</span>
+            <span className="brand-subtitle">AFFILIATE MARKETING GOLD PROGRAM</span>
+          </div>
         </Link>
 
         <nav className="main-nav" aria-label="Main navigation">
@@ -77,11 +80,55 @@ function Header() {
           ))}
         </nav>
 
-        <Link className="button button-primary header-cta" to="/register">
-          Register
-        </Link>
+        <div className="header-actions">
+          <Link className="button button-primary header-cta" to="/register">
+            Register
+          </Link>
+          <button type="button" className="mobile-menu-button" aria-label="Open menu">
+            ☰
+          </button>
+        </div>
       </div>
     </header>
+  )
+}
+
+function renderPlanCard(plan) {
+  return (
+    <article className="plan-card vip-card" key={plan.id}>
+      <div className="vip-card-header">
+        <div className="vip-crown">👑</div>
+        <div className="vip-number">{plan.name}</div>
+      </div>
+
+      <div className="vip-row">
+        <div className="vip-column">
+          <span className="vip-label">Minimum Deposit</span>
+          <strong>{formatMoney(plan.usdAmount)}</strong>
+        </div>
+
+        <div className="vip-column">
+          <span className="vip-label">Old Price</span>
+          <strong className="old-price">{formatMoney(plan.oldPrice)}</strong>
+        </div>
+
+        <div className="vip-column">
+          <span className="vip-label">Discount</span>
+          <strong className="discount-price">{plan.discount}</strong>
+        </div>
+      </div>
+
+      <div className="vip-interest-box">
+        <span className="vip-label">Interest</span>
+        <strong>{plan.interest}</strong>
+      </div>
+
+      <div className="vip-actions">
+        <Link className="button button-primary" to={`/register?plan=${plan.id}`}>
+          Select {plan.name}
+        </Link>
+      </div>
+    </article>
   )
 }
 
@@ -119,16 +166,21 @@ function HomePage() {
     <>
       <section className="hero section-dark">
         <div className="container hero-grid">
-          <div>
-            <p className="eyebrow">AFFILIATE GOLD PROGRAM</p>
-            <h1>Begin Your Gold Journey With Confidence</h1>
-            <p className="lead">Discover a clear, premium pathway to participate in the Siri Semantan Gold program with flexible plans, transparent steps, and a simple registration process.</p>
+          <div className="hero-copy">
+            <p className="eyebrow">AFFILIATE MARKETING</p>
+            <h1>
+              <span>Siri Samantan</span>
+              <span>Affiliate Marketing</span>
+              <span>Gold Program</span>
+            </h1>
+            <p className="lead">Turn Your Participation into Real Gold Value</p>
             <div className="hero-actions">
               <Link className="button button-primary" to="/register">Register &amp; Get Started</Link>
               <Link className="button button-secondary" to="/plans">View Plans</Link>
             </div>
             <p className="fine-print">Please review the applicable program terms, fees, eligibility requirements, and risks before completing your participation.</p>
           </div>
+
           <div className="hero-visual">
             <div className="gold-card">
               <span className="gold-tag">Premium Access</span>
@@ -147,53 +199,48 @@ function HomePage() {
         <div className="container benefits-grid">
           <div className="benefit-card">
             <span>🪙</span>
-            <h4>Gold Focused</h4>
-            <p>A program centered around gold-related assets.</p>
+            <h4>Gold-Focused</h4>
+            <p>Premium access to a gold-linked investment model.</p>
           </div>
           <div className="benefit-card">
             <span>💎</span>
             <h4>Flexible Plans</h4>
-            <p>Choose from the available participation levels.</p>
+            <p>Choose the level that matches your capital and goals.</p>
           </div>
           <div className="benefit-card">
             <span>🎁</span>
             <h4>Reward Opportunities</h4>
-            <p>Eligible rewards may be available according to program terms.</p>
+            <p>Structured participation designed around value creation.</p>
           </div>
           <div className="benefit-card">
             <span>📦</span>
-            <h4>Physical Asset Options</h4>
-            <p>Eligible balances may have physical-asset conversion options.</p>
+            <h4>Physical Assets</h4>
+            <p>Physical gold conversion may be available under conditions.</p>
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-investment">
         <div className="container">
-          <h2>A Clear, Premium Way to Get Started</h2>
-          <p>From plan selection to registration and payment, every stage is designed to be easy to follow, professional in presentation, and built for confidence.</p>
-          <Link className="button button-secondary" to="/about">Learn More</Link>
+          <div className="section-title-row">
+            <div className="title-mark">👑</div>
+            <h2>Investment Plans</h2>
+          </div>
+
+          <div className="plans-grid vip-grid">
+            {plans.map((plan) => renderPlanCard(plan))}
+          </div>
         </div>
       </section>
 
-      <section className="section alt-bg">
+      <section className="section notice-section">
         <div className="container">
-          <h2>Choose Your Plan</h2>
-          <div className="plans-grid">
-            {plans.map((plan) => (
-              <div className="plan-card" key={plan.id}>
-                <h3>{plan.name}</h3>
-                <div className="price-line">{formatMoney(plan.usdAmount)}</div>
-                <p className="local-price">≈ {plan.localAmount}</p>
-                <p>{plan.description}</p>
-                <ul>
-                  {plan.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}
-                </ul>
-                <Link className="button button-primary" to={`/register?plan=${plan.id}`}>
-                  Select {plan.name}
-                </Link>
-              </div>
-            ))}
+          <div className="gold-notice-box">
+            <div className="notice-icon">⚠</div>
+            <p>
+              NOTE: 917 PURE GOLD CONVERTIBLE TO PHYSICAL ASSETS<br />
+              DELIVERY TO BE MADE ON POINT OF PROVIDED PICKUP ADDRESS.
+            </p>
           </div>
         </div>
       </section>
@@ -364,17 +411,12 @@ function AboutPage() {
 function PlansPage() {
   return (
     <div className="page-shell container">
-      <h1>Plans</h1>
-      <div className="plans-grid">
-        {plans.map((plan) => (
-          <div className="plan-card" key={plan.id}>
-            <h3>{plan.name}</h3>
-            <div className="price-line">{formatMoney(plan.usdAmount)}</div>
-            <p className="local-price">≈ {plan.localAmount}</p>
-            <p>{plan.description}</p>
-            <Link className="button button-primary" to={`/register?plan=${plan.id}`}>Select {plan.name}</Link>
-          </div>
-        ))}
+      <div className="section-title-row page-title-row">
+        <div className="title-mark">👑</div>
+        <h1>Investment Plans</h1>
+      </div>
+      <div className="plans-grid vip-grid">
+        {plans.map((plan) => renderPlanCard(plan))}
       </div>
     </div>
   )
@@ -792,6 +834,14 @@ function RiskDisclosurePage() {
 }
 
 function App() {
+  const mobileLinks = [
+    { label: 'Home', to: '/' },
+    { label: 'About', to: '/about' },
+    { label: 'Plans', to: '/plans' },
+    { label: 'Contact', to: '/contact' },
+    { label: 'Login', to: '/register' },
+  ]
+
   return (
     <div className="app-shell">
       <Header />
@@ -814,6 +864,14 @@ function App() {
         </Routes>
       </main>
       <Footer />
+
+      <nav className="mobile-bottom-nav" aria-label="Mobile bottom navigation">
+        {mobileLinks.map((link) => (
+          <NavLink key={link.to} to={link.to} className={({ isActive }) => isActive ? 'bottom-nav-item active' : 'bottom-nav-item'}>
+            {link.label}
+          </NavLink>
+        ))}
+      </nav>
     </div>
   )
 }
