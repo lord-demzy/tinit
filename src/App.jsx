@@ -118,9 +118,23 @@ function renderPlanCard(plan) {
         </div>
       </div>
 
-      <div className="vip-interest-box">
-        <span className="vip-label">Interest</span>
-        <strong>{plan.interest}</strong>
+      <div className="vip-rewards-box">
+        <span className="vip-label">Gold Reward Plan</span>
+        <div className="vip-reward-row">
+          <span>Daily Gold Return</span>
+          <strong>{plan.rewards.daily}</strong>
+        </div>
+        <div className="vip-reward-row">
+          <span>Weekly Accumulation</span>
+          <strong>{plan.rewards.weekly}</strong>
+        </div>
+        <div className="vip-reward-row">
+          <span>Monthly Accumulation</span>
+          <strong>{plan.rewards.monthly}</strong>
+        </div>
+        {plan.id === 'vip1' && (
+          <p className="reward-note">Estimated calculation based on continued participation and the program terms.</p>
+        )}
       </div>
 
       <div className="vip-actions">

@@ -447,7 +447,7 @@ h2 {
   color: #ff6d6d !important;
 }
 
-.vip-interest-box {
+.vip-rewards-box {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -457,9 +457,29 @@ h2 {
   border-radius: 12px;
 }
 
-.vip-interest-box strong {
+.vip-reward-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.14);
+}
+
+.vip-reward-row span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.vip-reward-row strong {
   color: var(--gold-soft);
   line-height: 1.5;
+}
+
+.reward-note {
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.45;
+  margin: 0.4rem 0 0;
 }
 
 .vip-actions {
