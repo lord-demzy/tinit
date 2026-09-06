@@ -132,9 +132,11 @@ function renderPlanCard(plan) {
           <span>Monthly Accumulation</span>
           <strong>{plan.rewards.monthly}</strong>
         </div>
-        {plan.id === 'vip1' && (
-          <p className="reward-note">Estimated calculation based on continued participation and the program terms.</p>
-        )}
+        <p className="reward-note">
+          {plan.id === 'vip1'
+            ? 'Approved VIP 1 calculation based on continued participation and the program terms.'
+            : 'Proportional estimate based on the approved VIP 1 calculation; confirm final figures before publishing as guaranteed.'}
+        </p>
       </div>
 
       <div className="vip-actions">
