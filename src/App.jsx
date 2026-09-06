@@ -582,6 +582,11 @@ function RegisterPage() {
             </label>
 
             <label className="field field-full">
+              <span>Residential Address</span>
+              <textarea placeholder="Enter your full residential address" rows="3" required />
+            </label>
+
+            <label className="field field-full">
               <span>Referral Code (Optional)</span>
               <input type="text" placeholder="If applicable" />
             </label>

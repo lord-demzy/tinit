@@ -987,22 +987,26 @@ h2 {
 }
 
 .registration-form input,
-.registration-form select {
+.registration-form select,
+.registration-form textarea {
   background: rgba(13, 13, 17, 0.96);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 0.92rem 1rem;
   color: var(--text);
   font: inherit;
+  resize: vertical;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.registration-form input::placeholder {
+.registration-form input::placeholder,
+.registration-form textarea::placeholder {
   color: rgba(223, 230, 239, 0.55);
 }
 
 .registration-form input:focus,
-.registration-form select:focus {
+.registration-form select:focus,
+.registration-form textarea:focus {
   outline: none;
   border-color: rgba(212, 175, 55, 0.8);
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.14);
