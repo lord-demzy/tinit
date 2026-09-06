@@ -184,12 +184,8 @@ function HomePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">AFFILIATE MARKETING</p>
-            <h1>
-              <span>Siri Samantan</span>
-              <span>Affiliate Marketing</span>
-              <span>Gold Program</span>
-            </h1>
-            <p className="lead">Turn Your Participation into Real Gold Value</p>
+            <h1>Begin Your Gold Journey With Confidence</h1>
+            <p className="lead">Explore the Siri Samantan Gold Program through structured participation, flexible plans, and a clear path to get started.</p>
             <div className="hero-actions">
               <Link className="button button-primary" to="/register">Register &amp; Get Started</Link>
               <Link className="button button-secondary" to="/plans">View Plans</Link>
