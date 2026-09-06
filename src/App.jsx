@@ -418,6 +418,24 @@ function AboutPage() {
 
         <GoldMarketChart />
       </div>
+
+        <section className="company-video-section" aria-labelledby="company-video-title">
+          <div className="section-heading">
+            <p className="eyebrow">INSIDE THE COMPANY</p>
+            <h2 id="company-video-title">Our Team and Company Culture</h2>
+            <p>See moments from the people and community behind Siri Samantan Gold.</p>
+          </div>
+          <div className="company-video-card">
+            <video className="company-video" controls playsInline preload="metadata">
+              <source src="/images/company/company-celebration-2026-09-06.mp4" type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+            <div className="company-video-caption">
+              <strong>Company Milestones</strong>
+              <span>Shared for transparency and a closer look at the team behind the program.</span>
+            </div>
+          </div>
+        </section>
     </div>
   )
 }
