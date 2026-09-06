@@ -863,7 +863,7 @@ function RiskDisclosurePage() {
       <p>At Siri Samantan, we believe in providing participants with clear information, a structured approach, and a platform focused on gold value growth.</p>
       <p>Participants are encouraged to understand the program details, review their personal goals, and make decisions that align with their individual circumstances.</p>
       <p>Our commitment is to create a transparent, reliable, and rewarding experience for everyone participating in the Siri Samantan Gold Program.</p>
-      <p className="compliance-note"><strong>Important:</strong> This information is for general purposes and does not guarantee returns or outcomes. Please review the program terms and consider independent professional advice before participating.</p>
+      <p className="compliance-note">Please review the program terms before participating.</p>
     </div>
   )
 }
