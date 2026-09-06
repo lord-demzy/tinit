@@ -315,7 +315,7 @@ function HomePage() {
           <div className="faq-item"><h4>What role do the partnerships and supply channels play?</h4><p>They provide the foundation for scale. The business model is designed to reduce unnecessary middle-layer costs through direct sourcing, verified logistics, and coordinated supply chain execution, allowing a more efficient route from extraction to delivery and value distribution.</p></div>
           <div className="faq-item"><h4>How does licensing and compliance affect the model?</h4><p>Proper licensing, certification, and approvals are essential for operational credibility. They help support legitimate sourcing, improve traceability, and reduce disruption in the movement and handling of gold across the supply chain.</p></div>
           <div className="faq-item"><h4>Why can the business support a daily allocation model?</h4><p>The daily allocation is based on a high-volume operational framework. When sourcing, transit, and processing are managed efficiently across a broader network, the business can create a more sustainable structure for recurring distribution and cost-controlled gold access.</p></div>
-          <div className="faq-item"><h4>Is the 1g daily claim guaranteed?</h4><p>The program is presented as a structured opportunity based on operational capacity and supply chain efficiency. As with any asset-linked opportunity, practical outcomes can vary depending on production flow, logistics, market conditions, and operational execution.</p></div>
+          <div className="faq-item"><h4>Is this a guaranteed investment?</h4><p>Gold has historically been recognised as a valuable asset and a way to preserve wealth. At Siri Samantan, our program is designed to provide participants with opportunities linked to gold value through structured participation. As with any asset-related opportunity, gold values may be influenced by global economic conditions, market trends, and other external factors. Our focus is to provide a clear, transparent, and rewarding experience while helping participants build long-term value through gold-based benefits.</p></div>
           <div className="faq-item"><h4>What payment method is used?</h4><p>Crypto payment instructions are provided on the payment page, including the supported wallet and blockchain network for a secure and efficient transaction process.</p></div>
           <div className="faq-item"><h4>Do I need an account?</h4><p>No account creation is required. The process is designed to be simple, direct, and transparent from registration through payment and confirmation.</p></div>
         </div>
@@ -513,7 +513,7 @@ function FAQPage() {
       <div className="faq-item"><h4>Do I need an account?</h4><p>No account creation is required. The website is designed for a straightforward registration and payment flow.</p></div>
       <div className="faq-item"><h4>How do I choose the right plan?</h4><p>Each plan is structured to suit a different level of interest and participation. Review the details and select the option that best fits your goals.</p></div>
       <div className="faq-item"><h4>What happens after payment is sent?</h4><p>After payment, you return to the site and upload your payment proof so it can be reviewed and confirmed.</p></div>
-      <div className="faq-item"><h4>Is this a guaranteed investment?</h4><p>No. Gold-related and asset-linked participation involves risk, and all relevant disclosures should be reviewed before proceeding.</p></div>
+      <div className="faq-item"><h4>Is this a guaranteed investment?</h4><p>Gold has historically been recognised as a valuable asset and a way to preserve wealth. At Siri Samantan, our program is designed to provide participants with opportunities linked to gold value through structured participation. As with any asset-related opportunity, gold values may be influenced by global economic conditions, market trends, and other external factors. Our focus is to provide a clear, transparent, and rewarding experience while helping participants build long-term value through gold-based benefits.</p></div>
       <div className="faq-item"><h4>Why do I need to upload proof of payment?</h4><p>Submission of proof of payment helps verify the transaction and supports confirmation of your registration and participation details.</p></div>
     </div>
   )
@@ -857,12 +857,12 @@ function PrivacyPage() {
 function RiskDisclosurePage() {
   return (
     <div className="page-shell container legal-page">
-      <h1>Risk Disclosure</h1>
-      <p>Participation in any gold, digital asset, or related program may involve a high degree of risk. Investors and participants should carefully assess their own financial goals, risk tolerance, and capacity before proceeding.</p>
-      <p>Prices and values of gold-related, digital, or asset-linked opportunities may fluctuate significantly due to market conditions, supply and demand, liquidity constraints, regulatory developments, and external economic factors. There is no guarantee of profit, preservation of capital, or recovery of funds.</p>
-      <p>Crypto transactions are not reversible. Sending funds to an incorrect wallet address or via an unsupported network may result in permanent loss. Participants must verify all wallet and network details before making any transfer.</p>
-      <p>Program structures, payout schedules, and promotional terms may change according to internal review, operational requirements, or external business conditions. Any information presented on this website is intended for informational purposes only and does not guarantee performance or outcome.</p>
-      <p>Participants should consider seeking independent legal, financial, or investment advice before making any decision to participate. By continuing with registration and payment, you acknowledge that you understand the risks involved and accept responsibility for the decisions you make.</p>
+      <h1>Understanding Your Gold Participation</h1>
+      <p>Gold has remained one of the world’s most recognised stores of value for generations. Like all asset-related opportunities, gold value can be affected by market movements, economic changes, and global conditions.</p>
+      <p>At Siri Samantan, we believe in providing participants with clear information, a structured approach, and a platform focused on gold value growth.</p>
+      <p>Participants are encouraged to understand the program details, review their personal goals, and make decisions that align with their individual circumstances.</p>
+      <p>Our commitment is to create a transparent, reliable, and rewarding experience for everyone participating in the Siri Samantan Gold Program.</p>
+      <p className="compliance-note"><strong>Important:</strong> This information is for general purposes and does not guarantee returns or outcomes. Please review the program terms and consider independent professional advice before participating.</p>
     </div>
   )
 }
